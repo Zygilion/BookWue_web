@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Book Illustrations Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function() {
+          emailjs.init("Argvbwa8eFO9Dmmu8"); // Add your EmailJS public key here
+       })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="https://bookwue.com" class="logo-link">
+                <div class="logo">BookWue</div>
+            </a>
+            <nav>
+                <a href="https://bookwue.com">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h1>Choose a Book Title</h1>
+            <p class="subheading">Select from our curated collection or choose a genre to inspire your illustrations</p>
+        </section>
+
+        <section class="selection-area container">
+            <div class="book-covers-grid">
+                <div class="book-cover" data-book="oz">
+                    <img src="https://placecats.com/200/300" alt="The Wonderful Wizard of Oz">
+                    <p>The Wonderful Wizard of Oz</p>
+                </div>
+                <div class="book-cover" data-book="alice">
+                    <img src="https://placecats.com/201/300" alt="Alice in Wonderland">
+                    <p>Alice in Wonderland</p>
+                </div>
+                <div class="book-cover" data-book="hobbit">
+                    <img src="https://placecats.com/202/300" alt="The Hobbit">
+                    <p>The Hobbit</p>
+                </div>
+                <div class="book-cover" data-book="narnia">
+                    <img src="https://placecats.com/203/300" alt="The Chronicles of Narnia">
+                    <p>The Chronicles of Narnia</p>
+                </div>
+            </div>
+            <div class="generate-button-container">
+                <button id="generateBtn" class="generate-btn" disabled>Generate Now</button>
+            </div>
+        </section>
+
+        <section id="results" class="results-section container hidden">
+            <div class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Generating your illustrations...</p>
+            </div>
+            
+            <div class="results-content">
+                <div class="selected-book">
+                    <h3>Book Cover</h3>
+                    <div class="book-display">
+                        <img src="" alt="Selected book cover" class="selected-cover">
+                        <h4 class="book-title"></h4>
+                    </div>
+                </div>
+
+                <div class="illustrations-section">
+                    <h3>Illustrations</h3>
+                    
+                    <div class="illustration-category">
+                        <h4>Characters</h4>
+                        <div class="image-grid" data-category="characters">
+                            <div class="image-placeholder"></div>
+                            <div class="image-placeholder"></div>
+                            <div class="image-placeholder"></div>
+                        </div>
+                    </div>
+
+                    <div class="illustration-category">
+                        <h4>Scenes</h4>
+                        <div class="image-grid" data-category="scenes">
+                            <div class="image-placeholder"></div>
+                            <div class="image-placeholder"></div>
+                            <div class="image-placeholder"></div>
+                        </div>
+                    </div>
+
+                    <div class="illustration-category">
+                        <h4>Settings</h4>
+                        <div class="image-grid" data-category="settings">
+                            <div class="image-placeholder"></div>
+                            <div class="image-placeholder"></div>
+                            <div class="image-placeholder"></div>
+                        </div>
+                    </div>
+
+                    <div class="illustration-category">
+                        <h4>Objects & Symbols</h4>
+                        <div class="image-grid" data-category="objects">
+                            <div class="image-placeholder"></div>
+                            <div class="image-placeholder"></div>
+                            <div class="image-placeholder"></div>
+                        </div>
+                    </div>
+
+                    <div class="illustration-category">
+                        <h4>Maps</h4>
+                        <div class="image-grid" data-category="maps">
+                            <div class="image-placeholder"></div>
+                            <div class="image-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="merchandise-section">
+                    <h3>Merchandise Examples</h3>
+                    <div class="merch-grid">
+                        <div class="merch-item">
+                            <div class="image-placeholder"></div>
+                            <p>T-Shirt</p>
+                        </div>
+                        <div class="merch-item">
+                            <div class="image-placeholder"></div>
+                            <p>Mug</p>
+                        </div>
+                        <div class="merch-item">
+                            <div class="image-placeholder"></div>
+                            <p>Poster</p>
+                        </div>
+                        <div class="merch-item">
+                            <div class="image-placeholder"></div>
+                            <p>Phone Case</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section container">
+            <div class="cta-box">
+                <h2>Want to do this with your book?</h2>
+                <p>Just leave your email address and we will let you know when we will be live</p>
+                <form id="notifyForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Notify Me</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BookWue. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

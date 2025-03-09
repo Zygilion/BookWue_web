@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Book Illustrations Generator</title>
+    <meta name="description" content="Generate AI book illustrations instantly. Create book covers, character illustrations, scenes, and merchandise designs." />
+    <meta name="author" content="BookWue" />
+    <meta property="og:title" content="AI Book Illustrations Generator" />
+    <meta property="og:description" content="Generate AI book illustrations instantly. Create book covers, character illustrations, scenes, and merchandise designs." />
+    <meta property="og:image" content="/path-to-your-og-image.png" />
+    <meta property="og:url" content="https://bookwue.com" />
+    
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/path-to-your-favicon.ico">
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
        (function() {
-          emailjs.init("Argvbwa8eFO9Dmmu8"); // Add your EmailJS public key here
+          emailjs.init("Argvbwa8eFO9Dmmu8");
        })();
     </script>
 </head>
@@ -28,26 +37,26 @@
     <main>
         <section class="hero container">
             <h1>Choose a Book Title</h1>
-            <p class="subheading">Select from our curated collection or choose a genre to inspire your illustrations</p>
+            <p class="subheading">Select from our curated collection to inspire your illustrations</p>
         </section>
 
         <section class="selection-area container">
             <div class="book-covers-grid">
-                <div class="book-cover" data-book="oz">
-                    <img src="https://placecats.com/200/300" alt="The Wonderful Wizard of Oz">
-                    <p>The Wonderful Wizard of Oz</p>
+                <div class="book-cover" data-book="carol">
+                    <img src="https://i.imgur.com/k6Hocpi.png" alt="A Christmas Carol">
+                    <p>A Christmas Carol</p>
                 </div>
                 <div class="book-cover" data-book="alice">
-                    <img src="https://placecats.com/201/300" alt="Alice in Wonderland">
+                    <img src="https://i.imgur.com/n3mvRWJ.png" alt="Alice in Wonderland">
                     <p>Alice in Wonderland</p>
                 </div>
-                <div class="book-cover" data-book="hobbit">
-                    <img src="https://placecats.com/202/300" alt="The Hobbit">
-                    <p>The Hobbit</p>
+                <div class="book-cover" data-book="peter">
+                    <img src="https://i.imgur.com/HWdriee.png" alt="Peter Pan">
+                    <p>Peter Pan</p>
                 </div>
-                <div class="book-cover" data-book="narnia">
-                    <img src="https://placecats.com/203/300" alt="The Chronicles of Narnia">
-                    <p>The Chronicles of Narnia</p>
+                <div class="book-cover" data-book="oz">
+                    <img src="https://i.imgur.com/97RlAIN.png" alt="The Wonderful Wizard of Oz">
+                    <p>The Wonderful Wizard of Oz</p>
                 </div>
             </div>
             <div class="generate-button-container">
@@ -85,15 +94,6 @@
                     <div class="illustration-category">
                         <h4>Scenes</h4>
                         <div class="image-grid" data-category="scenes">
-                            <div class="image-placeholder"></div>
-                            <div class="image-placeholder"></div>
-                            <div class="image-placeholder"></div>
-                        </div>
-                    </div>
-
-                    <div class="illustration-category">
-                        <h4>Settings</h4>
-                        <div class="image-grid" data-category="settings">
                             <div class="image-placeholder"></div>
                             <div class="image-placeholder"></div>
                             <div class="image-placeholder"></div>
@@ -165,5 +165,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <button id="scrollToTop" class="scroll-to-top hidden">↑</button>
 </body>
 </html> 

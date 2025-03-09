@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Hide initial loader
+    const initialLoader = document.getElementById('initial-loader');
+    if (initialLoader) {
+        initialLoader.classList.add('hidden');
+    }
+
     const resultsSection = document.getElementById('results');
     const loadingSpinner = document.querySelector('.loading-spinner');
     const notifyForm = document.getElementById('notifyForm');
@@ -10,33 +16,28 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentlyDisplayedBook = null;
 
     const bookData = {
-        'oz': {
-            title: 'The Wonderful Wizard of Oz',
-            coverUrl: 'https://placecats.com/200/300',
+        'carol': {
+            title: 'A Christmas Carol',
+            coverUrl: 'https://i.imgur.com/k6Hocpi.png',
             illustrations: {
                 characters: [
-                    'https://picsum.photos/300/400?random=1',
-                    'https://picsum.photos/300/400?random=2',
-                    'https://picsum.photos/300/400?random=3'
+                    'https://i.imgur.com/1xItFpP.png',
+                    'https://i.imgur.com/nUhontc.png',
+                    'https://i.imgur.com/RRynh4J.png'
                 ],
                 scenes: [
-                    'https://picsum.photos/300/400?random=4',
-                    'https://picsum.photos/300/400?random=5',
-                    'https://picsum.photos/300/400?random=6'
-                ],
-                settings: [
-                    'https://picsum.photos/300/400?random=7',
-                    'https://picsum.photos/300/400?random=8',
-                    'https://picsum.photos/300/400?random=9'
+                    'https://i.imgur.com/4bc6hmR.png',
+                    'https://i.imgur.com/YxZH0Nf.jpeg',
+                    'https://i.imgur.com/YxZH0Nf.jpeg'
                 ],
                 objects: [
-                    'https://picsum.photos/300/400?random=10',
-                    'https://picsum.photos/300/400?random=11',
-                    'https://picsum.photos/300/400?random=12'
+                    'https://i.imgur.com/byRtv3c.png',
+                    'https://i.imgur.com/hQnAyO2.png',
+                    'https://i.imgur.com/ZqBYUO2.png'
                 ],
                 maps: [
-                    'https://picsum.photos/300/400?random=13',
-                    'https://picsum.photos/300/400?random=14'
+                    'https://i.imgur.com/1GtSyTi.jpeg',
+                    'https://i.imgur.com/vdLNtl7.png'
                 ]
             },
             merchandise: [
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'alice': {
             title: 'Alice in Wonderland',
-            coverUrl: 'https://placecats.com/201/300',
+            coverUrl: 'https://i.imgur.com/n3mvRWJ.png',
             illustrations: {
                 characters: [
                     'https://picsum.photos/300/400?random=1',
@@ -59,11 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     'https://picsum.photos/300/400?random=4',
                     'https://picsum.photos/300/400?random=5',
                     'https://picsum.photos/300/400?random=6'
-                ],
-                settings: [
-                    'https://picsum.photos/300/400?random=7',
-                    'https://picsum.photos/300/400?random=8',
-                    'https://picsum.photos/300/400?random=9'
                 ],
                 objects: [
                     'https://picsum.photos/300/400?random=10',
@@ -82,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 'https://picsum.photos/300/400?random=18'
             ]
         },
-        'hobbit': {
-            title: 'The Hobbit',
-            coverUrl: 'https://placecats.com/202/300',
+        'peter': {
+            title: 'Peter Pan',
+            coverUrl: 'https://i.imgur.com/HWdriee.png',
             illustrations: {
                 characters: [
                     'https://picsum.photos/300/400?random=1',
@@ -95,11 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     'https://picsum.photos/300/400?random=4',
                     'https://picsum.photos/300/400?random=5',
                     'https://picsum.photos/300/400?random=6'
-                ],
-                settings: [
-                    'https://picsum.photos/300/400?random=7',
-                    'https://picsum.photos/300/400?random=8',
-                    'https://picsum.photos/300/400?random=9'
                 ],
                 objects: [
                     'https://picsum.photos/300/400?random=10',
@@ -118,9 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 'https://picsum.photos/300/400?random=18'
             ]
         },
-        'narnia': {
-            title: 'The Chronicles of Narnia',
-            coverUrl: 'https://placecats.com/203/300',
+        'oz': {
+            title: 'The Wonderful Wizard of Oz',
+            coverUrl: 'https://i.imgur.com/97RlAIN.png',
             illustrations: {
                 characters: [
                     'https://picsum.photos/300/400?random=1',
@@ -131,11 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     'https://picsum.photos/300/400?random=4',
                     'https://picsum.photos/300/400?random=5',
                     'https://picsum.photos/300/400?random=6'
-                ],
-                settings: [
-                    'https://picsum.photos/300/400?random=7',
-                    'https://picsum.photos/300/400?random=8',
-                    'https://picsum.photos/300/400?random=9'
                 ],
                 objects: [
                     'https://picsum.photos/300/400?random=10',
@@ -164,15 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.selected-cover').src = book.coverUrl;
         document.querySelector('.book-title').textContent = book.title;
 
-        // Update illustrations
-        const categories = ['characters', 'scenes', 'settings', 'objects', 'maps'];
+        // Update illustrations with removed settings category
+        const categories = ['characters', 'scenes', 'objects', 'maps'];
         categories.forEach(category => {
             const containers = document.querySelectorAll(`[data-category="${category}"] .image-placeholder`);
             book.illustrations[category].forEach((url, index) => {
                 if (containers[index]) {
-                    // Reset background first
                     containers[index].style.backgroundImage = 'none';
-                    // Create new image to preload
                     const img = new Image();
                     img.src = url;
                     img.onload = () => {
@@ -186,9 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const merchContainers = document.querySelectorAll('.merch-grid .image-placeholder');
         book.merchandise.forEach((url, index) => {
             if (merchContainers[index]) {
-                // Reset background first
                 merchContainers[index].style.backgroundImage = 'none';
-                // Create new image to preload
                 const img = new Image();
                 img.src = url;
                 img.onload = () => {
@@ -235,7 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 selectedBook.coverUrl,
                 ...selectedBook.illustrations.characters,
                 ...selectedBook.illustrations.scenes,
-                ...selectedBook.illustrations.settings,
                 ...selectedBook.illustrations.objects,
                 ...selectedBook.illustrations.maps,
                 ...selectedBook.merchandise
@@ -298,6 +279,30 @@ document.addEventListener('DOMContentLoaded', () => {
             emailInput.disabled = false;
             submitButton.disabled = false;
             submitButton.textContent = 'Notify Me';
+        });
+    });
+
+    // Add error handling for image loading
+    window.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.target.src = '/path-to-fallback-image.jpg'; // Add a fallback image
+        }
+    }, true);
+
+    // Add this to your existing JavaScript
+    window.addEventListener('scroll', () => {
+        const scrollBtn = document.getElementById('scrollToTop');
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add('visible');
+        } else {
+            scrollBtn.classList.remove('visible');
+        }
+    });
+
+    document.getElementById('scrollToTop').addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 }); 

@@ -287,13 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add error handling for image loading
-    window.addEventListener('error', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.target.src = '/fallback.png'; // Add a fallback image
-        }
-    }, true);
-
     // Add this to your existing JavaScript
     window.addEventListener('scroll', () => {
         const scrollBtn = document.getElementById('scrollToTop');

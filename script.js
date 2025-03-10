@@ -21,28 +21,28 @@ document.addEventListener('DOMContentLoaded', () => {
             coverUrl: 'https://i.imgur.com/k6Hocpi.png',
             illustrations: {
                 characters: [
-                    'https://i.imgur.com/1xItFpP.png',
-                    'https://i.imgur.com/nUhontc.png',
-                    'https://i.imgur.com/RRynh4J.png'
+                    'https://i.imgur.com/Xjhm7BA.png',
+                    'https://picsum.photos/300/400?random=17',
+                    'https://picsum.photos/300/400?random=17'
                 ],
                 scenes: [
-                    'https://i.imgur.com/4bc6hmR.png',
-                    'https://i.imgur.com/YxZH0Nf.jpeg',
-                    'https://i.imgur.com/YxZH0Nf.jpeg'
+                    'https://picsum.photos/300/400?random=17',
+                    'https://picsum.photos/300/400?random=17',
+                    'https://picsum.photos/300/400?random=17'
                 ],
                 objects: [
-                    'https://i.imgur.com/byRtv3c.png',
-                    'https://i.imgur.com/hQnAyO2.png',
-                    'https://i.imgur.com/ZqBYUO2.png'
+                    'https://picsum.photos/300/400?random=17',
+                    'https://picsum.photos/300/400?random=17',
+                    'https://picsum.photos/300/400?random=17'
                 ],
                 maps: [
-                    'https://i.imgur.com/1GtSyTi.jpeg',
-                    'https://i.imgur.com/vdLNtl7.png'
+                    'https://picsum.photos/300/400?random=17',
+                    'https://picsum.photos/300/400?random=17'
                 ]
             },
             merchandise: [
-                'https://picsum.photos/300/400?random=15',
-                'https://picsum.photos/300/400?random=16',
+                'https://i.imgur.com/USnnqp2.png',
+                'https://i.imgur.com/1vsBOd8.png',
                 'https://picsum.photos/300/400?random=17',
                 'https://picsum.photos/300/400?random=18'
             ]
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             coverUrl: 'https://i.imgur.com/n3mvRWJ.png',
             illustrations: {
                 characters: [
-                    'https://picsum.photos/300/400?random=1',
+                    'https://i.imgur.com/kZFOnph.png',
                     'https://picsum.photos/300/400?random=2',
                     'https://picsum.photos/300/400?random=3'
                 ],
@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             },
             merchandise: [
-                'https://picsum.photos/300/400?random=15',
-                'https://picsum.photos/300/400?random=16',
+                'https://i.imgur.com/fIvDTUX.png',
+                'https://i.imgur.com/Zy6Ujcb.png',
                 'https://picsum.photos/300/400?random=17',
                 'https://picsum.photos/300/400?random=18'
             ]
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             coverUrl: 'https://i.imgur.com/HWdriee.png',
             illustrations: {
                 characters: [
-                    'https://picsum.photos/300/400?random=1',
+                    'https://i.imgur.com/tvKMcGZ.png',
                     'https://picsum.photos/300/400?random=2',
                     'https://picsum.photos/300/400?random=3'
                 ],
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             merchandise: [
                 'https://picsum.photos/300/400?random=15',
-                'https://picsum.photos/300/400?random=16',
+                'https://i.imgur.com/S864beo.png',
                 'https://picsum.photos/300/400?random=17',
                 'https://picsum.photos/300/400?random=18'
             ]
@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             },
             merchandise: [
-                'https://picsum.photos/300/400?random=15',
-                'https://picsum.photos/300/400?random=16',
+                'https://i.imgur.com/7q8LRpV.png',
+                'https://i.imgur.com/7RSDVTK.png',
                 'https://picsum.photos/300/400?random=17',
                 'https://picsum.photos/300/400?random=18'
             ]
@@ -147,7 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.results-content').classList.add('hidden');
         
         // Update selected book
-        document.querySelector('.selected-cover').src = book.coverUrl;
+        const selectedCover = document.querySelector('.selected-cover');
+        selectedCover.style.opacity = '0'; // Hide the image while loading
+        selectedCover.src = book.coverUrl;
+        selectedCover.onload = () => {
+            selectedCover.style.opacity = '1'; // Show image when loaded
+        };
         document.querySelector('.book-title').textContent = book.title;
 
         // Update illustrations with removed settings category

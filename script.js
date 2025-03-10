@@ -303,4 +303,11 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+    // Update the image loading error handler
+    window.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.target.src = 'placeholder.jpg'; // Add placeholder image path
+        }
+    }, true);
 }); 

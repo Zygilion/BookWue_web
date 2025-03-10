@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add error handling for image loading
     window.addEventListener('error', function(e) {
         if (e.target.tagName === 'IMG') {
-            e.target.src = '/path-to-fallback-image.jpg'; // Add a fallback image
+            e.target.src = '/fallback.png'; // Add a fallback image
         }
     }, true);
 

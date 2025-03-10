@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "service_dxvod9n", // Add your EmailJS service ID
             "template_72opr7p", // Add your EmailJS template ID
             {
-                to_email: "zygisluk@gmail.com", // Add your email address
+                to_email: "hello@bookwue.com", // Add your email address
                 from_email: email,
                 message: `New subscription request from: ${email}`
             }

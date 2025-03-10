@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             illustrations: {
                 characters: [
                     'https://i.imgur.com/kZFOnph.png',
-                    'https://picsum.photos/300/400?random=2',
-                    'https://picsum.photos/300/400?random=3'
+                    'https://i.imgur.com/naDqg0S.png',
+                    'https://i.imgur.com/lYBwiMm.png'
                 ],
                 scenes: [
                     'https://picsum.photos/300/400?random=4',
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'https://i.imgur.com/fIvDTUX.png',
                 'https://i.imgur.com/Zy6Ujcb.png',
                 'https://picsum.photos/300/400?random=17',
-                'https://picsum.photos/300/400?random=18'
+                'https://i.imgur.com/9zahhKX.png'
             ]
         },
         'peter': {

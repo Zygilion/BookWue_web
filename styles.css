@@ -503,24 +503,105 @@ footer .container {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .results-grid {
-        grid-template-columns: 1fr;
+    /* Update header for mobile */
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    /* Update hero section */
+    h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    .subheading {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    /* Update book covers grid */
+    .book-covers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    .book-cover {
+        padding: 0.5rem;
+    }
+
+    .book-cover img {
+        height: 250px; /* Smaller height for mobile */
+    }
+
+    /* Update results section */
+    .results-section {
+        padding: 2rem 0;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .image-placeholder {
+        min-height: 200px; /* Smaller height for mobile */
+    }
+
+    /* Update CTA section */
+    .cta-box {
+        padding: 2rem 1rem;
+    }
+
+    .cta-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-box p {
+        font-size: 1rem;
     }
 
     .cta-box form {
         flex-direction: column;
+        gap: 0.5rem;
     }
 
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .book-selector {
-        flex-direction: column;
-    }
-
-    select {
+    .cta-box input,
+    .cta-box button {
         width: 100%;
+    }
+
+    /* Update merchandise section */
+    .merchandise-section {
+        padding: 1rem;
+    }
+
+    .merch-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .merch-item .image-placeholder {
+        min-height: 200px;
+    }
+
+    /* Update generate button */
+    .generate-btn {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
     }
 
     footer .container {
@@ -533,32 +614,16 @@ footer .container {
         margin: 0 1rem;
     }
 
-    .book-covers-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .book-selector {
+        flex-direction: column;
     }
 
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .merch-grid {
-        grid-template-columns: repeat(2, 1fr);
+    select {
+        width: 100%;
     }
 
     .hero {
         padding: 4rem 0 3rem;
-    }
-
-    .cta-box h2 {
-        font-size: 2rem;
-    }
-
-    .container {
-        padding: 0 1.5rem;
-    }
-
-    .logo-image {
-        height: 32px;
     }
 
     .footer-content {
@@ -568,6 +633,71 @@ footer .container {
 
     .footer-logo {
         height: 24px;
+    }
+}
+
+/* Add styles for even smaller screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .book-covers-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .book-cover img {
+        height: 300px; /* Slightly taller for single column */
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column for illustrations */
+    }
+
+    .merch-grid {
+        grid-template-columns: 1fr; /* Single column for merchandise */
+    }
+
+    .image-placeholder {
+        min-height: 250px; /* Taller for single column */
+    }
+
+    /* Adjust footer for very small screens */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .footer-links a {
+        margin: 0;
+    }
+}
+
+/* Add touch-friendly interactions */
+@media (hover: none) {
+    .book-cover:hover {
+        transform: none;
+    }
+
+    .generate-btn:not(:disabled):hover {
+        transform: none;
+    }
+
+    .image-placeholder:hover {
+        transform: none;
+    }
+
+    /* Disable floating animation on mobile */
+    .image-placeholder {
+        animation: none;
     }
 }
 

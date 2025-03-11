@@ -64,12 +64,35 @@ header .container {
     color: var(--primary-dark);
 }
 
+/* Update navigation styles */
 nav a {
     margin-left: 2rem;
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: 700; /* Changed to bold */
     font-family: 'Satoshi', sans-serif;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-middle));
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--gradient-middle);
 }
 
 /* Hero Section */
@@ -104,9 +127,13 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 900;
     margin-bottom: 1.5rem;
     line-height: 1.1;
+    background: linear-gradient(135deg, #FF6B6B 0%, #4834D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .subheading {
@@ -524,6 +551,7 @@ footer .container {
     nav a {
         margin-left: 0;
         font-size: 0.9rem;
+        padding-bottom: 4px; /* Slightly larger padding for mobile */
     }
 
     /* Update hero section */
@@ -763,14 +791,13 @@ footer .container {
 /* Update scroll to top button styles */
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle));
-    color: white;
+    bottom: 24px;
+    right: 24px;
+    background: white;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: none;
+    border: 1px solid #E4E4E7;
     cursor: pointer;
     opacity: 0;
     transition: all 0.3s ease;
@@ -778,7 +805,17 @@ footer .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.scroll-to-top::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-image: url('arrow-up.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .scroll-to-top.visible {
@@ -786,9 +823,9 @@ footer .container {
 }
 
 .scroll-to-top:hover {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: #F4F4F5;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(72, 52, 212, 0.25);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Add floating animation to images */
@@ -833,11 +870,57 @@ footer .container {
 /* Update footer styles */
 .footer-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+.footer-content p {
+    font-weight: 700;
+}
+
+.footer-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* Update mobile footer styles */
+@media (max-width: 768px) {
+    .footer-content {
+        text-align: center;
+    }
+    
+    .footer-links {
+        text-align: center;
+    }
+    
+    .footer-links a {
+        margin: 0 1rem;
+    }
 }
 
 .footer-logo {
     height: 30px;
     width: auto;
+}
+
+/* Add gradient borders to sections */
+.illustrations-section, .merchandise-section {
+    border: 1px solid transparent;
+    background: linear-gradient(var(--white), var(--white)) padding-box,
+                linear-gradient(135deg, rgba(255, 107, 107, 0.5), rgba(72, 52, 212, 0.5)) border-box;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+/* Update section headings */
+.results-section h3 {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
 } 

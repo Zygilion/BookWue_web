@@ -53,17 +53,6 @@ header .container {
     width: auto;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--primary-color);
-    transition: color 0.2s;
-}
-
-.logo:hover {
-    color: var(--primary-dark);
-}
-
 /* Update navigation styles */
 nav a {
     margin-left: 2rem;
@@ -146,21 +135,6 @@ h1 {
 /* Selection Area */
 .selection-area {
     padding: 2rem 0;
-}
-
-.book-selector {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-}
-
-select {
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 2px solid var(--light-gray);
-    border-radius: 0.5rem;
-    min-width: 250px;
 }
 
 .generate-btn, .cta-box button {
@@ -287,19 +261,6 @@ select {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
 
-.illustrations-grid, .merch-grid {
-    display: grid;
-    gap: 1rem;
-}
-
-.illustrations-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.merch-grid {
-    grid-template-columns: repeat(1, 1fr);
-}
-
 /* Loading Spinner */
 .loading-spinner {
     text-align: center;
@@ -395,8 +356,8 @@ select {
 }
 
 .cta-box input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    border-color: var(--gradient-middle);
+    box-shadow: 0 0 0 3px rgba(72, 52, 212, 0.2);
     outline: none;
 }
 
@@ -432,12 +393,6 @@ footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.footer-links a {
-    margin-left: 2rem;
-    text-decoration: none;
-    color: var(--text-color);
 }
 
 /* Utilities */
@@ -879,28 +834,6 @@ footer .container {
     font-weight: 700;
 }
 
-.footer-links a {
-    margin-left: 2rem;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 700;
-}
-
-/* Update mobile footer styles */
-@media (max-width: 768px) {
-    .footer-content {
-        text-align: center;
-    }
-    
-    .footer-links {
-        text-align: center;
-    }
-    
-    .footer-links a {
-        margin: 0 1rem;
-    }
-}
-
 .footer-logo {
     height: 30px;
     width: auto;
@@ -923,4 +856,50 @@ footer .container {
     background-clip: text;
     font-weight: 900;
     margin-bottom: 1.5rem;
-} 
+}
+
+.loading-spinner p {
+    margin-top: 1rem;
+    position: relative;
+}
+
+.loading-progress {
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+.loading-progress-bar {
+    height: 100%;
+    width: 0;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.success {
+    border-left: 4px solid #10B981;
+}
+
+.notification.error {
+    border-left: 4px solid #EF4444;
+}
+
+.notification.show {
+    transform: translateX(0);
+}

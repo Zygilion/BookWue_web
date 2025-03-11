@@ -22,29 +22,29 @@ document.addEventListener('DOMContentLoaded', () => {
             illustrations: {
                 characters: [
                     'https://i.imgur.com/Xjhm7BA.png',
-                    'https://picsum.photos/300/400?random=17',
-                    'https://picsum.photos/300/400?random=17'
+                    'https://i.imgur.com/zylV5p0.png',
+                    'https://i.imgur.com/aFdZPJn.png'
                 ],
                 scenes: [
-                    'https://picsum.photos/300/400?random=17',
-                    'https://picsum.photos/300/400?random=17',
-                    'https://picsum.photos/300/400?random=17'
+                    'https://i.imgur.com/nF3WBNh.png',
+                    'https://i.imgur.com/eGEJTu1.png',
+                    'https://i.imgur.com/Nel0Yh0.png'
                 ],
                 objects: [
-                    'https://picsum.photos/300/400?random=17',
-                    'https://picsum.photos/300/400?random=17',
-                    'https://picsum.photos/300/400?random=17'
+                    'https://i.imgur.com/gyFEoaP.png',
+                    'https://i.imgur.com/XStve5B.png',
+                    'https://i.imgur.com/4K30FVt.png'
                 ],
                 maps: [
-                    'https://picsum.photos/300/400?random=17',
-                    'https://picsum.photos/300/400?random=17'
+                    'https://i.imgur.com/UEVeXIm.png',
+                    'https://i.imgur.com/nZok61l.png'
                 ]
             },
             merchandise: [
                 'https://i.imgur.com/USnnqp2.png',
                 'https://i.imgur.com/1vsBOd8.png',
-                'https://picsum.photos/300/400?random=17',
-                'https://picsum.photos/300/400?random=18'
+                'https://i.imgur.com/Td55eV1.png',
+                'https://i.imgur.com/JAYcAj7.png'
             ]
         },
         'alice': {
@@ -57,24 +57,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     'https://i.imgur.com/lYBwiMm.png'
                 ],
                 scenes: [
-                    'https://picsum.photos/300/400?random=4',
-                    'https://picsum.photos/300/400?random=5',
-                    'https://picsum.photos/300/400?random=6'
+                    'https://i.imgur.com/GkzL37m.png',
+                    'https://i.imgur.com/Nlndova.png',
+                    'https://i.imgur.com/kxB1FcM.png'
                 ],
                 objects: [
-                    'https://picsum.photos/300/400?random=10',
-                    'https://picsum.photos/300/400?random=11',
-                    'https://picsum.photos/300/400?random=12'
+                    'https://i.imgur.com/iiLuhjT.png',
+                    'https://i.imgur.com/eYG62ek.png',
+                    'https://i.imgur.com/m3HF8No.png'
                 ],
                 maps: [
-                    'https://picsum.photos/300/400?random=13',
-                    'https://picsum.photos/300/400?random=14'
+                    'https://i.imgur.com/ryYU7S6.png',
+                    'https://i.imgur.com/Ujds25I.png'
                 ]
             },
             merchandise: [
                 'https://i.imgur.com/fIvDTUX.png',
                 'https://i.imgur.com/Zy6Ujcb.png',
-                'https://picsum.photos/300/400?random=17',
+                'https://i.imgur.com/tCruT6v.png',
                 'https://i.imgur.com/9zahhKX.png'
             ]
         },
@@ -84,29 +84,29 @@ document.addEventListener('DOMContentLoaded', () => {
             illustrations: {
                 characters: [
                     'https://i.imgur.com/tvKMcGZ.png',
-                    'https://picsum.photos/300/400?random=2',
-                    'https://picsum.photos/300/400?random=3'
+                    'https://i.imgur.com/1uarDVU.png',
+                    'https://i.imgur.com/v9vVlkN.png',
                 ],
                 scenes: [
-                    'https://picsum.photos/300/400?random=4',
-                    'https://picsum.photos/300/400?random=5',
-                    'https://picsum.photos/300/400?random=6'
+                    'https://i.imgur.com/h8gG4yG.png',
+                    'https://i.imgur.com/a59joZq.png',
+                    'https://i.imgur.com/HVZ6S9l.png'
                 ],
                 objects: [
-                    'https://picsum.photos/300/400?random=10',
-                    'https://picsum.photos/300/400?random=11',
-                    'https://picsum.photos/300/400?random=12'
+                    'https://i.imgur.com/DgIdEMm.png',
+                    'https://i.imgur.com/0s7YwZM.png',
+                    'https://i.imgur.com/6V1eZV1.png'
                 ],
                 maps: [
-                    'https://picsum.photos/300/400?random=13',
-                    'https://picsum.photos/300/400?random=14'
+                    'https://i.imgur.com/lwTXALY.png',
+                    'https://i.imgur.com/A807nWg.png'
                 ]
             },
             merchandise: [
-                'https://picsum.photos/300/400?random=15',
+                'https://i.imgur.com/7AeF3xX.png',
                 'https://i.imgur.com/S864beo.png',
-                'https://picsum.photos/300/400?random=17',
-                'https://picsum.photos/300/400?random=18'
+                'https://i.imgur.com/mJEnntC.png',
+                'https://i.imgur.com/DaOjZs9.png'
             ]
         },
         'oz': {
@@ -114,30 +114,30 @@ document.addEventListener('DOMContentLoaded', () => {
             coverUrl: 'https://i.imgur.com/97RlAIN.png',
             illustrations: {
                 characters: [
-                    'https://picsum.photos/300/400?random=1',
-                    'https://picsum.photos/300/400?random=2',
-                    'https://picsum.photos/300/400?random=3'
+                    'https://i.imgur.com/tJgNthW.png',
+                    'https://i.imgur.com/wuWzv5y.png',
+                    'https://i.imgur.com/Sdj2MkP.png'
                 ],
                 scenes: [
-                    'https://picsum.photos/300/400?random=4',
-                    'https://picsum.photos/300/400?random=5',
-                    'https://picsum.photos/300/400?random=6'
+                    'https://i.imgur.com/5XgpsrO.png',
+                    'https://i.imgur.com/b5I4960.png',
+                    'https://i.imgur.com/J7FICgy.png'
                 ],
                 objects: [
-                    'https://picsum.photos/300/400?random=10',
-                    'https://picsum.photos/300/400?random=11',
-                    'https://picsum.photos/300/400?random=12'
+                    'https://i.imgur.com/tHOCe7b.png',
+                    'https://i.imgur.com/lsdscAv.png',
+                    'https://i.imgur.com/RHWSy43.png'
                 ],
                 maps: [
-                    'https://picsum.photos/300/400?random=13',
-                    'https://picsum.photos/300/400?random=14'
+                    'https://i.imgur.com/JO2bMfG.png',
+                    'https://i.imgur.com/xu65rWI.png'
                 ]
             },
             merchandise: [
                 'https://i.imgur.com/7q8LRpV.png',
                 'https://i.imgur.com/7RSDVTK.png',
-                'https://picsum.photos/300/400?random=17',
-                'https://picsum.photos/300/400?random=18'
+                'https://i.imgur.com/ETZO25L.png',
+                'https://i.imgur.com/nfX4vF5.png'
             ]
         }
     };

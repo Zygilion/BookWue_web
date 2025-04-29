@@ -9,12 +9,37 @@
     <meta property="og:title" content="BookWue - AI Book Illustrations Generator" />
     <meta property="og:description" content="Generate AI book illustrations instantly. Create book covers, character illustrations, scenes, and merchandise designs." />
     <meta property="og:url" content="https://bookwue.com" />
-    
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G61BZT6D91"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G61BZT6D91');
+    </script>
+
+    <!-- Apollo tracking script -->
+    <script>
+      function initApollo() {
+        var n = Math.random().toString(36).substring(7),
+            o = document.createElement("script");
+        o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n;
+        o.async = true;
+        o.defer = true;
+        o.onload = function() {
+          window.trackingFunctions.onLoad({ appId: "6772dedf6839ad0692cb022b" });
+        };
+        document.head.appendChild(o);
+      }
+      initApollo();
+    </script>
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="bookwue-icon.ico">
-    
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
        (function() {
